@@ -1,0 +1,27 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin nav-link {
+  position: relative;
+
+  display: flex;
+
+  font-size: $medium;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $black;
+}
+
+@mixin blank-pseudo {
+  content: "  ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
