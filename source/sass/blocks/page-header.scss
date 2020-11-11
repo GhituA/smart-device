@@ -1,0 +1,16 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: -85px;
+  padding: 33px calc(50% - 705px);
+  width: 100%;
+  min-height: 85px;
+
+  background-color: $blue-80;
+}
+
+.page-header__logo svg {
+  color: $white;
+}
