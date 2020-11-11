@@ -1,54 +1,32 @@
 @font-face {
-  font-family: "Open Sans";
+  font-family: "PT Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("OpenSans-Regular"),
-    local("Open Sans Regular"),
-    url("../fonts/opensans-regular.woff2") format("woff2"),
-    url("../fonts/opensans-regular.woff") format("woff");
+  src: local("Ptmono-regular"),
+    local("PT Mono"),
+    url("../fonts/ptmono-regular.woff2") format("woff2"),
+    url("../fonts/ptmono-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Roboto Condensed";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-display: swap;
-  src: local("OpenSans-Light"),
-    local("Open Sans Light"),
-    url("../fonts/opensans-light.woff2") format("woff2"),
-    url("../fonts/opensans-light.woff") format("woff");
+  src: local("RobotoCondensed-Regular"),
+    local("Roboto Condensed"),
+    url("../fonts/robotocondensed-regular.woff2") format("woff2"),
+    url("../fonts/robotocondensed-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local("OpenSans-SemiBold"),
-    local("Open Sans SemiBold"),
-    url("../fonts/opensans-semibold.woff2") format("woff2"),
-    url("../opensans-semibold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Open Sans";
+  font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("OpenSans-Bold"),
-    local("Open Sans Bold"),
-    url("../fonts/opensans-bold.woff2") format("woff2"),
-    url("../fonts/opensans-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Overpass";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local("Overpass-Bold"),
-    local("Overpass Bold"),
-    url("../fonts/overpass-bold.woff2") format("woff2"),
-    url("../fonts/overpass-bold.woff") format("woff");
+  src: local("RobotoCondensed-Bold"),
+    local("Roboto Condensed Bold"),
+    url("../fonts/robotocondensed-bold.woff2") format("woff2"),
+    url("../robotocondensed-bold.woff") format("woff");
 }
