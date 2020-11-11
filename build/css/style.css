@@ -310,25 +310,25 @@ template {
 
 /* stylelint-enable */
 @font-face {
+  font-family: "roboto_condensedregular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto-Condensed"), local("Roboto Condensed"), url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "roboto_condensedbold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Roboto-CondensedBold"), local("Roboto CondensedBold"), url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff"); }
+
+@font-face {
   font-family: "PT Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local("Ptmono-regular"), local("PT Mono"), url("../fonts/ptmono-regular.woff2") format("woff2"), url("../fonts/ptmono-regular.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("RobotoCondensed-Regular"), local("Roboto Condensed"), url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local("RobotoCondensed-Bold"), local("Roboto Condensed Bold"), url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../robotocondensed-bold.woff") format("woff"); }
 
 /*colors*/
 /*device size*/
@@ -383,7 +383,7 @@ input[type="checkbox"].visually-hidden {
   font-family: "Roboto Condensed", "Helvetica", sans-serif;
   color: #1b2d37;
   background-color: #ffffff;
-  counter-reset: section; }
+  opacity: 1; }
   .page--lock {
     overflow-y: hidden; }
 
@@ -394,17 +394,33 @@ input[type="checkbox"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: -85px;
   padding: 33px calc(50% - 705px);
   width: 100%;
-  min-height: 85px;
   background-color: rgba(27, 45, 55, 0.8); }
+  @media (max-width: 1500px) {
+    .page-header {
+      padding: 33px 25px; } }
+  @media (max-width: 1023px) {
+    .page-header {
+      padding: 20px 25px; } }
+  @media (max-width: 767px) {
+    .page-header {
+      padding: 16px 17px; } }
 
-.page-header__logo svg {
+.page-header__logo {
+  line-height: 0; }
+
+.page-header__logo-img {
   color: #ffffff; }
+  @media (max-width: 767px) {
+    .page-header__logo-img {
+      width: auto;
+      height: 38px; } }
+
+@media (max-width: 767px) {
+  .page-header__logo-text {
+    visibility: hidden; } }
 
 .head-contacts {
   display: -webkit-box;
@@ -412,7 +428,15 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
+          justify-content: flex-end;
+  padding-top: 4px; }
+  @media (max-width: 1023px) {
+    .head-contacts {
+      padding: 0; } }
+  @media (max-width: 767px) {
+    .head-contacts {
+      display: block;
+      margin-top: 6px; } }
 
 .head-contacts__list {
   margin: 0;
@@ -421,19 +445,31 @@ input[type="checkbox"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: 38px; }
+  margin-right: 50px; }
+  @media (max-width: 1023px) {
+    .head-contacts__list {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-right: 0; } }
 
 .head-contacts li {
-  margin-left: 88px;
+  margin-left: 90px;
   margin-top: 14px;
   margin-bottom: 14px; }
-  .head-contacts li:first-child {
-    margin-left: 0; }
+  @media (max-width: 1023px) {
+    .head-contacts li {
+      margin-left: 30px; } }
+  @media (max-width: 767px) {
+    .head-contacts li {
+      margin: 0;
+      margin-left: 21px; } }
 
 .head-contacts__link {
   display: -webkit-box;
@@ -443,22 +479,66 @@ input[type="checkbox"].visually-hidden {
   line-height: 18px;
   color: #ffffff;
   font-family: "PT Mono", "Courier", monospace;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .head-contacts__link:hover, .head-contacts__link:focus {
+    text-decoration: underline; }
+  .head-contacts__link:active {
+    text-decoration: none;
+    color: #1b2d37; }
+
+@media (max-width: 1023px) {
+  .head-contacts__link span {
+    display: none; } }
 
 .head-contacts__icon {
   margin-right: 16px;
   color: #00b2ff; }
+  @media (max-width: 1023px) {
+    .head-contacts__icon {
+      margin-right: 0;
+      width: 24px;
+      height: 24px; } }
   .head-contacts__icon--mail {
     margin-right: 20px; }
+    @media (max-width: 1023px) {
+      .head-contacts__icon--mail {
+        margin-right: 0;
+        width: 25px;
+        height: 18px; } }
+
+.head-contacts__link:active svg {
+  color: #ffffff; }
 
 .head-contacts__button {
-  padding: 11px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 11px 0;
   width: 180px;
+  height: 45px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   border: 1px solid #ffffff;
   border-radius: 5px; }
+  @media (max-width: 1023px) {
+    .head-contacts__button {
+      display: none; } }
+  .head-contacts__button:hover, .head-contacts__button:focus {
+    color: #00b2ff; }
+  .head-contacts__button:active {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(27, 45, 55, 0.5); }

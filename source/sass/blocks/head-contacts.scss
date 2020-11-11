@@ -2,26 +2,45 @@
   display: flex;
   justify-content: flex-end;
 
+  padding-top: 4px;
+
+  @media (max-width: $desktop-width) {
+    padding: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin-top: 6px;
+  }
 }
 
 .head-contacts__list {
   @include list-reset;
 
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
 
+  margin-right: 50px;
 
-  margin-right: 38px;
+  @media (max-width: $desktop-width) {
+    align-items: center;
+    margin-right: 0;
+  }
 }
 
 .head-contacts li {
-  margin-left: 88px;
+  margin-left: 90px;
   margin-top: 14px;
   margin-bottom: 14px;
 
-  &:first-child {
-    margin-left: 0;
+  @media (max-width: $desktop-width) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+    margin-left: 21px;
   }
 }
 
@@ -33,28 +52,83 @@
   color: $white;
   font-family: $ptmono;
   text-decoration: none;
+
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: $blue-dark;
+  }
+}
+
+.head-contacts__link span {
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .head-contacts__icon {
   margin-right: 16px;
   color: $blue;
 
+  @media (max-width: $desktop-width) {
+    margin-right: 0;
+    width: 24px;
+    height: 24px;
+  }
+
   &--mail {
     margin-right: 20px;
+
+    @media (max-width: $desktop-width) {
+      margin-right: 0;
+      width: 25px;
+      height: 18px;
+    }
   }
 }
 
+.head-contacts__link:active svg {
+  color: $white;
+}
+
 .head-contacts__button {
-  padding: 11px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 11px 0;
   width: 180px;
+  height: 45px;
 
   font-size: 14px;
   line-height: 16px;
   color: $white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
   border: 1px solid $white;
   border-radius: 5px;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    color: $white-80;
+    background-color: $blue-50;
+  }
 }
