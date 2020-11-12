@@ -96,10 +96,15 @@
     }
 
     @media (max-width: $desktop-width) {
+      background-size: cover;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: 768px) {
       background-size: 804px auto;
     }
 
-    @media (max-width: $tablet-width) {
+
+    @media (max-width: $mobile-width) {
       background-size: auto 300px;
     }
   }
@@ -120,7 +125,7 @@
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/services2@1x.png");
-      background-size: auto 278px;
+      background-size: cover;
     }
   }
 
@@ -137,6 +142,10 @@
     }
 
     @media (max-width: $tablet-width) {
+      background-size: cover;
+    }
+
+    @media (max-width: $mobile-width) {
       background-size: 486px auto;
     }
   }

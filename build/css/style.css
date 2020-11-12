@@ -565,7 +565,7 @@ input[type="checkbox"].visually-hidden {
   background-size: cover; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .site-intro {
-      background-image: url("../img/hero-desktop@2x.jpg"); } }
+      background-image: url("../img/hero-desktop@2x.png"); } }
   @media (max-width: 1500px) {
     .site-intro {
       padding: 315px 25px 0; } }
@@ -575,12 +575,15 @@ input[type="checkbox"].visually-hidden {
       min-height: 712px;
       background-image: url("../img/hero-tablet@1x.png");
       background-position-y: 20px;
-      background-size: auto; } }
+      background-size: 1024px auto; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
     .site-intro {
       background-image: url("../img/hero-tablet@2x.png"); } }
   @media (max-width: 767px) {
     .site-intro {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       padding: 335px 16px 0;
       min-height: 695px;
       background-image: url("../img/hero-mobile@1x.png");
@@ -667,9 +670,9 @@ input[type="checkbox"].visually-hidden {
       height: 340px; } }
   @media (max-width: 767px) {
     .site-intro img {
-      left: 0;
+      left: 50%;
       top: 138px;
-      margin-left: 27px;
+      margin-left: -134px;
       width: 301px;
       height: 220px; } }
 
@@ -832,8 +835,11 @@ input[type="checkbox"].visually-hidden {
         background-image: url("../img/services1@2x.png"); } }
     @media (max-width: 1023px) {
       .services__link--production {
+        background-size: cover; } }
+    @media (min-width: 767px) and (max-width: 768px) {
+      .services__link--production {
         background-size: 804px auto; } }
-    @media (max-width: 767px) {
+    @media (max-width: 320px) {
       .services__link--production {
         background-size: auto 300px; } }
   .services__link--assemble {
@@ -850,7 +856,7 @@ input[type="checkbox"].visually-hidden {
     @media (max-width: 767px) {
       .services__link--assemble {
         background-image: url("../img/services2@1x.png");
-        background-size: auto 278px; } }
+        background-size: cover; } }
   .services__link--gear {
     background-image: url("../img/services3@1x.png"); }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -861,6 +867,9 @@ input[type="checkbox"].visually-hidden {
         background-size: 1206px auto;
         background-position-y: 50%; } }
     @media (max-width: 767px) {
+      .services__link--gear {
+        background-size: cover; } }
+    @media (max-width: 320px) {
       .services__link--gear {
         background-size: 486px auto; } }
   .services__link::after {
