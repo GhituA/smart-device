@@ -88,45 +88,57 @@
 
   &--production {
     background-image: url("../img/services1@1x.png");
-    // background-size: 294%;
+    background-size: auto 728px;
     background-position: center;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/services1@2x.png");
     }
-    //
-    // @media (max-width: $desktop-width) {
-    //   background-position-y: -130px;
-    //   background-size: 110%;
-    // }
-    //
-    // @media (max-width: $tablet-width) {
-    //   background-position-y: -23px;
-    //   background-size: auto 300px;
-    // }
+
+    @media (max-width: $desktop-width) {
+      background-size: 804px auto;
+    }
+
+    @media (max-width: $tablet-width) {
+      background-size: auto 300px;
+    }
   }
 
   &--assemble {
     background-image: url("../img/services2@1x.png");
-    // background-size: 276%;
+    background-size: auto 620px;
     background-position: center;
 
-    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //   background-image: url("../img/services2@2x.png");
-    // }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/services2@2x.png");
+    }
+
+    @media (max-width: $desktop-width) {
+      background-image: url("../img/services2@2x.png");
+      background-size: 1969px auto;
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/services2@1x.png");
+      background-size: auto 278px;
+    }
   }
 
   &--gear {
     background-image: url("../img/services3@1x.png");
 
-    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    //   background-image: url("../img/services3@2x.png");
-    // }
-    //
-    // @media (max-width: $desktop-width) {
-    //   background-size: 168%;
-    //   background-position-y: 50%;
-    // }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/services3@2x.png");
+    }
+
+    @media (max-width: $desktop-width) {
+      background-size: 1206px auto;
+      background-position-y: 50%;
+    }
+
+    @media (max-width: $tablet-width) {
+      background-size: 486px auto;
+    }
   }
 
   &::after {
