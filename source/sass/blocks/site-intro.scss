@@ -43,7 +43,7 @@
     background-position-y: 34px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero-modile@2x.png");
+      background-image: url("../img/hero-mobile@2x.png");
     }
   }
 }
@@ -53,7 +53,7 @@
   z-index: 4;
 }
 
-.site-intro  h1 {
+.site-intro h1 {
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
@@ -172,6 +172,8 @@
   background-color: $blue;
   border: 1px solid $blue;
   border-radius: 5px;
+
+  transition: 0.2s;
 
   @media (max-width: $desktop-width) {
     margin-left: 50px;
