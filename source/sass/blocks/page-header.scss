@@ -1,12 +1,12 @@
 .page-header {
+  position: relative;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: -85px;
+  margin-bottom: -118px;
   padding: 33px calc(50% - 705px);
   width: 100%;
-
-  background-color: $blue-80;
 
   @media (max-width: 1500px) {
     padding: 33px 25px;

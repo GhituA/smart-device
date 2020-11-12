@@ -124,11 +124,12 @@
 
   &:hover,
   &:focus {
-    color: $blue;
+    color: $blue-dark;
+    background-color: $white-80;
   }
 
   &:active {
     color: $white-80;
-    background-color: $blue-50;
+    background-color: $blue-dark;
   }
 }

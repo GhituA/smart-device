@@ -1,0 +1,229 @@
+.site-intro {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+  padding: 315px calc(50% - 710px) 0;
+  width: 100%;
+  min-height: 880px;
+  color: $white;
+
+  background-color: $blue-dark;
+  background-image: url("../img/hero-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
+  }
+
+  @media (max-width: 1500px) {
+    padding: 315px 25px 0;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 214px 88px 0;
+    min-height: 712px;
+
+    background-image: url("../img/hero-tablet@1x.png");
+    background-position-y: 20px;
+    background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 335px 16px 0;
+    min-height: 695px;
+
+    background-image: url("../img/hero-mobile@1x.png");
+    background-position-y: 34px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-modile@2x.png");
+    }
+  }
+}
+
+.site-intro__container {
+  position: relative;
+  z-index: 4;
+}
+
+.site-intro  h1 {
+  margin: 0;
+  margin-bottom: 28px;
+  padding: 0;
+
+  font-size: 80px;
+  line-height: 94px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @media (max-width: $desktop-width) {
+    width: 65%;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 24px;
+    width: 100%;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.site-intro p {
+  position: relative;
+  display: block;
+
+  margin: 0;
+  margin-bottom: 42px;
+  padding: 0;
+  padding-left: 95px;
+  width: 80%;
+
+  font-size: 22px;
+  line-height: 34px;
+  font-family: $ptmono;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 56px;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 39px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 0;
+
+    width: 66px;
+    height: 2px;
+    background-color: $white;
+
+    @media (max-width: $desktop-width) {
+      width: 33px;
+    }
+  }
+}
+
+.site-intro img {
+  position: absolute;
+  left: 50%;
+  top: 256px;
+  margin-left: 80px;
+
+  @media (max-width: 1500px) {
+    left: 55%;
+    margin-left: 100px;
+  }
+
+  @media (max-width: $desktop-width) {
+    left: 50%;
+    top: 136px;
+    margin-left: 126px;
+
+    width: 465px;
+    height: 340px;
+  }
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+    top: 138px;
+    margin-left: 27px;
+
+    width: 301px;
+    height: 220px;
+  }
+}
+
+.site-intro__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 95px;
+  width: 408px;
+  min-height: 55px;
+
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  background-color: $blue;
+  border: 1px solid $blue;
+  border-radius: 5px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 50px;
+    width: 380px;
+  }
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    margin-left: 0;
+    width: 100%;
+
+    &::after {
+      position: absolute;
+      content: "Бесплатная консультация";
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue-dark;
+    background-color: $white-80;
+    border: 1px solid $white;
+  }
+
+  &:active {
+    color: $white-80;
+    background-color: $blue-dark;
+  }
+}
+
+.site-intro__scroll {
+  position: absolute;
+  z-index: 10;
+
+  top: 736px;
+  margin-left: -36px;
+
+  font-family: $ptmono;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  text-decoration: none;
+
+  opacity: 0.5;
+  transform: rotate(-90deg);
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
