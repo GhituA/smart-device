@@ -162,6 +162,7 @@
   justify-content: center;
 
   margin-left: 95px;
+  padding: 15px 0;
   width: 408px;
   min-height: 55px;
 
@@ -171,6 +172,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: $white;
   background-color: $blue;
   border: 1px solid $blue;
@@ -191,7 +193,6 @@
     width: 100%;
 
     &::after {
-      position: absolute;
       content: "Бесплатная консультация";
       font-size: 16px;
       line-height: 19px;
@@ -216,7 +217,7 @@
   position: absolute;
   z-index: 10;
 
-  top: 736px;
+  bottom: 126px;
   margin-left: -36px;
 
   font-family: $ptmono;
