@@ -40,8 +40,8 @@
         } else {
           onAccordionOpen(footerNavBtn, 'footer-nav__toggle--open', footerNavLinks, 'footer-nav__links--closed');
         }
-      })
-    };
+      });
+    }
 
     if (footerContactsInfo && footerContactsBtn) {
       footerContactsBtn.classList.remove('footer-contacts__toggle--hidden');
@@ -53,7 +53,7 @@
         } else {
           onAccordionOpen(footerContactsBtn, 'footer-contacts__toggle--open', footerContactsInfo, 'footer-contacts__info--closed');
         }
-      })
+      });
     }
 
   };
