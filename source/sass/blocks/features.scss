@@ -1,16 +1,16 @@
 .features {
-  padding: 110px calc(50% - 585px);
+  padding: 110px calc(50% - 585px) 74px;
 
   @media (max-width: 1200px) {
     padding: 110px 25px;
   }
 
   @media (max-width: $desktop-width) {
-    padding: 54px 25px 52px;
+    padding: 54px 25px 25px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 36px 15px 52px;
+    padding: 36px 15px 38px;
   }
 }
 
@@ -50,6 +50,7 @@
   min-height: 300px;
 
   color: $blue;
+  background-color: $white;
   border: 1px solid #ebebeb;
   border-left: 3px solid $blue;
 
@@ -79,11 +80,6 @@
     cursor: pointer;
     border: 1px solid $blue;
     border-left: 3px solid $blue;
-  }
-
-  &--stopwatch,
-  &--tag {
-    padding-right: 8px;
   }
 
   &--stopwatch,
@@ -174,6 +170,13 @@
 
   @media (max-width: $desktop-width) {
     padding-right: 5px;
+  }
+}
+
+.features__item--stopwatch p,
+.features__item--tag p {
+  @media (max-width: $tablet-width) {
+    padding-right: 8px;
   }
 }
 

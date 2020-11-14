@@ -311,25 +311,25 @@ template {
 
 /* stylelint-enable */
 @font-face {
-  font-family: "roboto_condensedregular";
+  font-family: "RobotoCondensedRegular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Roboto-Condensed"), local("Roboto Condensed"), url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff"); }
+  src: local("Roboto-Condensed"), local("Roboto Condensed"), url("../fonts/robotocondensedregular.woff2") format("woff2"), url("../fonts/robotocondensedregular.woff") format("woff"); }
 
 @font-face {
-  font-family: "roboto_condensedbold";
+  font-family: "RobotoCondensedBold";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Roboto-CondensedBold"), local("Roboto CondensedBold"), url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff"); }
+  src: local("Roboto-CondensedBold"), local("Roboto Condensed Bold"), url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff"); }
 
 @font-face {
-  font-family: "pt_monoregular";
+  font-family: "PTMonoRegular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("PT-Mono"), local("PT Mono"), url("../fonts/ptmono-regular.woff2") format("woff2"), url("../fonts/ptmono-regular.woff") format("woff"); }
+  src: local("PT Mono"), local("PTMono-Regular"), url("../fonts/ptmonoregular.woff2") format("woff2"), url("../fonts/ptmonoregular.woff") format("woff"); }
 
 /*colors*/
 /*device size*/
@@ -548,6 +548,21 @@ input[type="checkbox"].visually-hidden {
     color: rgba(255, 255, 255, 0.8);
     background-color: #1b2d37; }
 
+.page-main {
+  background-image: url("../img/features-triangles.svg");
+  background-repeat: no-repeat;
+  background-position: center 848px;
+  background-size: 1920px auto; }
+  @media (max-width: 1023px) {
+    .page-main {
+      background-position: -351px 628px; } }
+  @media (max-width: 1023px) {
+    .page-main {
+      background-position: -680px 1200px; } }
+  @media (max-width: 767px) {
+    .page-main {
+      background-position: -680px 1170px; } }
+
 .site-intro {
   overflow: hidden;
   position: relative;
@@ -587,7 +602,8 @@ input[type="checkbox"].visually-hidden {
       padding: 335px 16px 0;
       min-height: 695px;
       background-image: url("../img/hero-mobile@1x.png");
-      background-position-y: 34px; } }
+      background-position: -218px 34px;
+      background-size: 768px auto; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .site-intro {
       background-image: url("../img/hero-mobile@2x.png"); } }
@@ -745,16 +761,16 @@ input[type="checkbox"].visually-hidden {
       display: none; } }
 
 .features {
-  padding: 110px calc(50% - 585px); }
+  padding: 110px calc(50% - 585px) 74px; }
   @media (max-width: 1200px) {
     .features {
       padding: 110px 25px; } }
   @media (max-width: 1023px) {
     .features {
-      padding: 54px 25px 52px; } }
+      padding: 54px 25px 25px; } }
   @media (max-width: 767px) {
     .features {
-      padding: 36px 15px 52px; } }
+      padding: 36px 15px 38px; } }
 
 .features__list {
   margin: 0;
@@ -802,6 +818,7 @@ input[type="checkbox"].visually-hidden {
   width: 570px;
   min-height: 300px;
   color: #00b2ff;
+  background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff; }
   @media (max-width: 1200px) {
@@ -826,8 +843,6 @@ input[type="checkbox"].visually-hidden {
     cursor: pointer;
     border: 1px solid #00b2ff;
     border-left: 3px solid #00b2ff; }
-  .features__item--stopwatch, .features__item--tag {
-    padding-right: 8px; }
   @media (max-width: 1023px) {
     .features__item--stopwatch, .features__item--hired {
       min-height: 306px; } }
@@ -889,9 +904,145 @@ input[type="checkbox"].visually-hidden {
     .features__item p {
       padding-right: 5px; } }
 
+@media (max-width: 767px) {
+  .features__item--stopwatch p,
+  .features__item--tag p {
+    padding-right: 8px; } }
+
 .features__item:hover,
 .features__item:hover p {
   color: #ffffff; }
+
+.about {
+  padding: 0 calc(50% - 585px);
+  margin-bottom: 110px; }
+  @media (max-width: 1200px) {
+    .about {
+      padding: 0 25px; } }
+  @media (max-width: 1023px) {
+    .about {
+      padding-right: 20px;
+      margin-bottom: 84px; } }
+  @media (max-width: 767px) {
+    .about {
+      padding: 0 16px;
+      margin-bottom: 64px; } }
+
+.about__info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 177px;
+  width: 83%; }
+  @media (max-width: 1023px) {
+    .about__info {
+      margin-left: 185px;
+      width: 75%; } }
+  @media (max-width: 767px) {
+    .about__info {
+      margin-left: 0;
+      width: 100%; } }
+
+.about__img {
+  position: absolute;
+  left: -200px;
+  top: 0; }
+  @media (max-width: 1023px) {
+    .about__img {
+      left: -210px;
+      width: auto;
+      height: 362px; } }
+  @media (max-width: 767px) {
+    .about__img {
+      display: none; } }
+
+.about__info h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: #666666; }
+  @media (max-width: 1023px) {
+    .about__info h2 {
+      margin-bottom: 26px;
+      font-size: 32px;
+      line-height: 45px; } }
+  @media (max-width: 767px) {
+    .about__info h2 {
+      margin-bottom: 22px;
+      font-size: 28px;
+      line-height: 39px; } }
+
+.about__info p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono", "Courier", monospace;
+  color: #666666; }
+  @media (max-width: 767px) {
+    .about__info p {
+      margin-bottom: 38px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .about__info p:first-of-type {
+      padding-right: 8px; } }
+  .about__info p:last-of-type {
+    margin-bottom: 0; }
+
+@media (max-width: 1023px) {
+  .about__info span {
+    position: relative;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-left: 0;
+    width: 100%; } }
+  @media (max-width: 1023px) and (max-width: 767px) {
+    .about__info span {
+      display: inline; } }
+
+@media (max-width: 1023px) {
+    .about__info span::after {
+      content: "Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог...";
+      font-size: 16px;
+      line-height: 22px; } }
+
+.about__button {
+  margin-top: 40px;
+  padding-top: 14px;
+  width: 180px;
+  min-height: 45px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #00b2ff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #00b2ff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  @media (max-width: 767px) {
+    .about__button {
+      margin-top: 30px; } }
+  .about__button:hover, .about__button:focus {
+    color: #ffffff;
+    background-color: #00b2ff; }
+  .about__button:active {
+    color: #00b2ff;
+    background-color: #ffffff; }
 
 .services {
   display: -webkit-box;
@@ -909,10 +1060,10 @@ input[type="checkbox"].visually-hidden {
       padding: 93px calc(50% - 482px) 97px; } }
   @media (max-width: 1023px) {
     .services {
-      padding: 53px 28px 32px; } }
+      padding: 48px 25px 32px; } }
   @media (max-width: 767px) {
     .services {
-      padding: 53px 15px 32px; } }
+      padding: 48px 15px 32px; } }
 
 .services h2 {
   margin: 0;
@@ -923,15 +1074,17 @@ input[type="checkbox"].visually-hidden {
   font-weight: 400; }
   @media (max-width: 1023px) {
     .services h2 {
+      margin-bottom: 45px;
       width: 88%;
       font-size: 32px;
       line-height: 48px; } }
   @media (max-width: 767px) {
     .services h2 {
+      margin-bottom: 40px;
       padding-left: 10px;
       width: 100%;
       font-size: 28px;
-      line-height: 42px; } }
+      line-height: 40px; } }
 
 .services ul {
   margin: 0;
@@ -958,7 +1111,7 @@ input[type="checkbox"].visually-hidden {
     .services li {
       margin-right: 0;
       margin-bottom: 46px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .services li {
       margin-bottom: 30px; } }
 
@@ -967,7 +1120,7 @@ input[type="checkbox"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 53px 43px;
+  padding: 50px 43px;
   width: 370px;
   min-height: 620px;
   text-decoration: none;
@@ -976,6 +1129,17 @@ input[type="checkbox"].visually-hidden {
   background-size: cover;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
+  @media (max-width: 1200px) {
+    .services__link {
+      width: 300px; } }
+  @media (max-width: 1023px) {
+    .services__link {
+      padding: 40px 45px;
+      width: 100%;
+      min-height: 256px; } }
+  @media (max-width: 767px) {
+    .services__link {
+      padding: 23px 35px; } }
   .services__link--production {
     background-image: url("../img/services1@1x.png");
     background-size: auto 728px;
@@ -1014,10 +1178,12 @@ input[type="checkbox"].visually-hidden {
         background-image: url("../img/services3@2x.png"); } }
     @media (max-width: 1023px) {
       .services__link--gear {
+        padding-top: 50px;
         background-size: 1206px auto;
         background-position-y: 50%; } }
     @media (max-width: 767px) {
       .services__link--gear {
+        padding-top: 30px;
         background-size: cover; } }
     @media (max-width: 320px) {
       .services__link--gear {
@@ -1041,17 +1207,6 @@ input[type="checkbox"].visually-hidden {
     background-color: rgba(27, 45, 55, 0.8); }
   .services__link:active::after {
     background-color: rgba(255, 255, 255, 0.1); }
-  @media (max-width: 1200px) {
-    .services__link {
-      width: 300px; } }
-  @media (max-width: 1023px) {
-    .services__link {
-      padding: 43px;
-      width: 100%;
-      min-height: 256px; } }
-  @media (max-width: 767px) {
-    .services__link {
-      padding: 23px 35px; } }
 
 .services__link h3 {
   margin: 0;

@@ -42,7 +42,8 @@
     min-height: 695px;
 
     background-image: url("../img/hero-mobile@1x.png");
-    background-position-y: 34px;
+    background-position: -218px 34px;
+    background-size: 768px auto;
 
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

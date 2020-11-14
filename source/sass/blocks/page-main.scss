@@ -1,0 +1,18 @@
+.page-main {
+  background-image: url("../img/features-triangles.svg");
+  background-repeat: no-repeat;
+  background-position: center 848px;
+  background-size: 1920px auto;
+
+  @media (max-width: $desktop-width) {
+    background-position: -351px 628px;
+  }
+
+  @media (max-width: $desktop-width) {
+    background-position: -680px 1200px;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-position: -680px 1170px;
+  }
+}

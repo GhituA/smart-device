@@ -1,0 +1,160 @@
+.about {
+  padding: 0 calc(50% - 585px);
+  margin-bottom: 110px;
+
+  @media (max-width: 1200px) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding-right: 20px;
+    margin-bottom: 84px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 16px;
+    margin-bottom: 64px;
+  }
+}
+
+.about__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 177px;
+  width: 83%;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 185px;
+    width: 75%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.about__img {
+  position: absolute;
+  left: -200px;
+  top: 0;
+
+  @media (max-width: $desktop-width) {
+    left: -210px;
+
+    width: auto;
+    height: 362px;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.about__info h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $grey;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 26px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 22px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__info p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $ptmono;
+  color: $grey;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  &:first-of-type {
+    @media (min-width: 768px) and (max-width: $desktop-width) {
+      padding-right: 8px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.about__info span {
+  @media (max-width: $desktop-width) {
+    position: relative;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-left: 0;
+    width: 100%;
+
+    @media (max-width: $tablet-width) {
+      display: inline;
+    }
+
+    &::after {
+      content: "Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог...";
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.about__button {
+  margin-top: 40px;
+  padding-top: 14px;
+  width: 180px;
+  min-height: 45px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  border: 1px solid $blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  transition: 0.2s;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:active {
+    color: $blue;
+    background-color: $white;
+  }
+}

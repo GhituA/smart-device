@@ -11,11 +11,11 @@
   }
 
   @media (max-width: $desktop-width) {
-    padding: 53px 28px 32px;
+    padding: 48px 25px 32px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 53px 15px 32px;
+    padding: 48px 15px 32px;
   }
 }
 
@@ -29,16 +29,19 @@
   font-weight: 400;
 
   @media (max-width: $desktop-width) {
+    margin-bottom: 45px;
     width: 88%;
+
     font-size: 32px;
     line-height: 48px;
   }
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
     padding-left: 10px;
     width: 100%;
     font-size: 28px;
-    line-height: 42px;
+    line-height: 40px;
   }
 }
 
@@ -65,7 +68,7 @@
     margin-bottom: 46px;
   }
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 30px;
   }
 }
@@ -74,7 +77,7 @@
   position: relative;
   display: flex;
 
-  padding: 53px 43px;
+  padding: 50px 43px;
   width: 370px;
   min-height: 620px;
 
@@ -85,6 +88,20 @@
   background-size: cover;
 
   transition: 0.2s;
+
+  @media (max-width: 1200px) {
+    width: 300px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 40px 45px;
+    width: 100%;
+    min-height: 256px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 23px 35px;
+  }
 
   &--production {
     background-image: url("../img/services1@1x.png");
@@ -137,11 +154,13 @@
     }
 
     @media (max-width: $desktop-width) {
+      padding-top: 50px;
       background-size: 1206px auto;
       background-position-y: 50%;
     }
 
     @media (max-width: $tablet-width) {
+      padding-top: 30px;
       background-size: cover;
     }
 
@@ -182,20 +201,6 @@
 
   &:active::after {
     background-color: $white-10;
-  }
-
-  @media (max-width: 1200px) {
-    width: 300px;
-  }
-
-  @media (max-width: $desktop-width) {
-    padding: 43px;
-    width: 100%;
-    min-height: 256px;
-  }
-
-  @media (max-width: $tablet-width) {
-    padding: 23px 35px;
   }
 }
 
