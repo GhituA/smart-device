@@ -39,6 +39,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
+  @media (max-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
   }
@@ -132,6 +136,8 @@
 }
 
 .footer-nav__links a {
+  position: relative;
+
   font-size: 15px;
   line-height: 25px;
   font-family: $ptmono;
@@ -142,9 +148,16 @@
   &:hover,
   &:focus {
     color: $blue-dark;
+    outline: 0;
+    text-decoration: underline;
   }
 
   &:active {
     color: $blue-80;
+    text-decoration: none;
+  }
+
+  &::after {
+    @include blank-pseudo;
   }
 }

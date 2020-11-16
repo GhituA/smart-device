@@ -4,7 +4,7 @@
 
   @media (max-width: $desktop-width) {
     margin-top: 38px;
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   @media (max-width: $tablet-width) {
@@ -32,6 +32,10 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
@@ -98,7 +102,8 @@
   flex-direction: column;
 
   @media (max-width: $tablet-width) {
-    margin-top: 28px;
+    margin-top: 33px;
+    padding-right: 5px;
 
     &--closed {
       display: none;
@@ -114,6 +119,8 @@
 }
 
 .footer-contacts__info a {
+  position: relative;
+
   font-size: 15px;
   line-height: 25px;
   font-family: $ptmono;
@@ -124,9 +131,15 @@
   &:hover,
   &:focus {
     color: $blue-dark;
+    outline: 0;
+    text-decoration: underline;
   }
 
   &:active {
     color: $blue-50;
+  }
+
+  &::after {
+    @include blank-pseudo;
   }
 }

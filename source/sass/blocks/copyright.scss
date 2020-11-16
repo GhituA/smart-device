@@ -4,9 +4,14 @@
   align-items: flex-start;
 
   padding: 15px calc(50% - 705px);
+  width: 100%;
 
   @media (max-width: 1500px) {
     padding: 15px 25px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 20px 25px;
   }
 
   @media (max-width: $tablet-width) {
@@ -70,6 +75,8 @@
   &:hover,
   &:focus {
     color: $blue-dark;
+    outline: 0;
+    text-decoration: underline;
   }
 
   &:active {

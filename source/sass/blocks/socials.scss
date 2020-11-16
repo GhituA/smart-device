@@ -51,6 +51,7 @@
 }
 
 .socials__links a {
+  position: relative;
 
   color: $grey-light;
   transition: 0.2s;
@@ -58,9 +59,14 @@
   &:hover,
   &:focus {
     color: $blue-dark;
+    outline: 0;
   }
 
   &:active {
     color: $blue-50;
+  }
+
+  &::after {
+    @include blank-pseudo;
   }
 }

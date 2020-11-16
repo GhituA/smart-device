@@ -42,7 +42,7 @@
     min-height: 695px;
 
     background-image: url("../img/hero-mobile@1x.png");
-    background-position: -218px 34px;
+    background-position-y: 34px;
     background-size: 768px auto;
 
 
@@ -131,7 +131,10 @@
   position: absolute;
   left: 50%;
   top: 256px;
+
   margin-left: 80px;
+  width: 705px;
+  height: 515px;
 
   @media (max-width: 1500px) {
     left: 55%;
@@ -206,6 +209,7 @@
     color: $blue-dark;
     background-color: $white-80;
     border: 1px solid $white;
+    outline: 0;
   }
 
   &:active {

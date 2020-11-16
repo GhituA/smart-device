@@ -3,6 +3,8 @@
   flex-direction: column;
 
   padding: 90px calc(50% - 585px) 97px;
+  width: 100%;
+
   background-color: $blue-dark;
   color: $white;
 
@@ -15,7 +17,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 48px 15px 32px;
+    padding: 48px 15px 35px;
   }
 }
 
@@ -188,6 +190,7 @@
   &:hover,
   &:focus {
     background-color: $white-10;
+    outline: 1px solid $white;
   }
 
   &:active {

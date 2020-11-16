@@ -1,6 +1,7 @@
 .about {
   padding: 0 calc(50% - 585px);
   margin-bottom: 110px;
+  width: 100%;
 
   @media (max-width: 1200px) {
     padding: 0 25px;
@@ -34,22 +35,36 @@
     margin-left: 0;
     width: 100%;
   }
-}
 
-.about__img {
-  position: absolute;
-  left: -200px;
-  top: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    left: -200px;
+    top: 4px;
 
-  @media (max-width: $desktop-width) {
-    left: -210px;
+    width: 139px;
+    height: 317px;
 
-    width: auto;
-    height: 362px;
-  }
+    background-image: url("../img/2005@1x.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 
-  @media (max-width: $tablet-width) {
-    display: none;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/2005@2x.png");
+    }
+
+    @media (max-width: $desktop-width) {
+      top: 0;
+      left: -210px;
+
+      width: 159px;
+      height: 362px;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 

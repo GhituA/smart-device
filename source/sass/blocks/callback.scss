@@ -1,0 +1,283 @@
+.callback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 90px calc(50% - 585px) 98px;
+  width: 100%;
+  min-height: 670px;
+
+  background-color: $blue;
+  background-image: url("../img/form-back@1x.png");
+  background-repeat: no-repeat;
+  background-size: 1920px auto;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/form-back@2x.png");
+  }
+
+  @media (max-width: 1200px) {
+    padding: 96px calc(50% - 482px) 113px;
+  }
+
+  @media (max-width: $desktop-width) {
+    min-height: auto;
+    padding: 82px 86px 105px 90px;
+    background-image: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 15px 43px;
+  }
+}
+
+.callback__container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.callback p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 12px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.callback span {
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  font-family: $ptmono;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.callback form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.callback__field {
+  margin-bottom: 40px;
+  width: 270px;
+
+  @media (max-width: $desktop-width) {
+    width: 47%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 28px;
+    width: 100%;
+  }
+
+  &--text {
+    width: 570px;
+    margin-bottom: 40px;
+
+    @media (max-width: $desktop-width) {
+      width: 100%;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--personal {
+    position: relative;
+    margin-bottom: 0;
+  }
+}
+
+.callback__field input {
+  padding: 14px 16px;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  font-family: $ptmono;
+  background-color: $white-10;
+  border: 0;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 16px;
+  }
+
+  &:hover {
+    outline: 1px solid $white-50;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
+  }
+}
+
+.callback__field--text textarea {
+  padding: 14px 16px;
+  width: 100%;
+  min-height: 156px;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  font-family: $ptmono;
+  background-color: $white-10;
+  border: 0;
+
+  resize: none;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @media (max-width: $desktop-width) {
+    min-height: 160px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 108px;
+  }
+
+  &:hover {
+    outline: 1px solid $white-50;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
+  }
+}
+
+.callback button {
+  width: 270px;
+  height: 45px;
+
+  padding: 11px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  @media (max-width: $desktop-width) {
+    width: 280px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+    outline: 0;
+  }
+
+  &:active {
+    color: $white;
+    background-color: transparent;
+  }
+}
+
+.callback__field--personal label {
+  display: block;
+
+  padding-left: 40px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $white-80;
+  font-family: $ptmono;
+
+
+  @media (max-width: $tablet-width) {
+    padding-left: 34px;
+  }
+}
+
+.callback__field--personal input + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 7px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid $white;
+
+  @media (min-width: $desktop-width) {
+    width: 17px;
+  }
+
+  @media (max-width: $tablet-width) {
+    left: 0;
+  }
+}
+
+.callback__field--personal input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 9px;
+  height: 6px;
+
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (max-width: $desktop-width) {
+    left: 11px;
+  }
+
+  @media (max-width: $tablet-width) {
+    left: 4px;
+  }
+}
+
+.callback__field--personal input:focus + label::before {
+  background-color: $blue-50;
+}
