@@ -202,7 +202,7 @@
               </div>
               <div class="callback__field callback__field--phone">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\d{10})$" placeholder="Телефон" required="">
+                <input type="tel" id="phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?(\(?\d{3}\)?[\- ]?)(\(?\d{2}\)?[\- ]?)(\d{2})$" placeholder="Телефон" required="">
               </div>
               <div class="callback__field callback__field--text">
                 <label class="visually-hidden" for="comment">Задайте интересующий Ваас вопрос</label>
@@ -323,7 +323,7 @@
           </div>
           <div class="popup__field popup__field--phone">
             <label class="visually-hidden" for="popup-phone">Телефон</label>
-            <input type="tel" id="popup-phone" name="phone" pattern="^(\(?\d{3}\)?[\- ]?)?(\(?\d{3}\)?[\- ]?)(\(?\d{2}\)?[\- ]?)(\d{2})$" placeholder="Телефон" required="">
+            <input type="tel" id="popup-phone" name="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?(\(?\d{3}\)?[\- ]?)(\(?\d{2}\)?[\- ]?)(\d{2})$" placeholder="Телефон" required="">
           </div>
           <div class="popup__field popup__field--text">
             <label class="visually-hidden" for="popup-comment">Задайте интересующий Ваас вопрос</label>
@@ -341,8 +341,7 @@
       </div>
     </section>
 
-    <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>
-
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,7 +1,21 @@
-root: true
+{
 
-env:
-  browser: true
+  "root": true,
 
-extends:
-  "htmlacademy/es5"
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+
+
+  "extends": "htmlacademy/es5",
+
+  "overrides": [
+    {
+      "files": ["source/js/*.js"],
+        "rules": {
+          "new-cap": 0,
+       }
+    }
+  ]
+}
