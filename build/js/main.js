@@ -4,74 +4,50 @@
 
   var footer = document.querySelector('.page-footer');
   var footerNav = footer.querySelector('.footer-nav');
+  var footerNavBar = footer.querySelector('.footer-nav__bar');
   var footerNavLinks = footerNav.querySelector('.footer-nav__links');
   var footerNavBtn = footerNav.querySelector('.footer-nav__toggle');
   var footerContacts = footer.querySelector('.footer-contacts');
+  var footerContactsBar = footer.querySelector('.footer-contacts__bar');
   var footerContactsInfo = footerContacts.querySelector('.footer-contacts__info');
   var footerContactsBtn = footerContacts.querySelector('.footer-contacts__toggle');
 
-  var onAccordionOpen = function (btn, btnclass, info, infoclass) {
-    btn.classList.add(btnclass);
-    info.classList.remove(infoclass);
 
-  };
+  if (footerNavBar && footerNav && footerNavBtn) {
+    footerNavLinks.classList.add('footer-nav__links--closed');
+    footerNavBtn.classList.remove('footer-nav__toggle--hidden');
 
-  var onAccordionClose = function (btn, btnclass, info, infoclass) {
-    btn.classList.remove(btnclass);
-    info.classList.add(infoclass);
-  };
+    footerNavBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      footerNavBtn.classList.toggle('footer-nav__toggle--open');
+      footerNavLinks.classList.toggle('footer-nav__links--closed');
+    });
+  }
 
-  var setAccordionActive = function () {
-    if (footerNavLinks) {
-      footerNavLinks.classList.add('footer-nav__links--closed');
-    }
+  if (footerContactsBar && footerContactsInfo && footerContactsBtn) {
+    footerContactsInfo.classList.add('footer-contacts__info--closed');
+    footerContactsBtn.classList.remove('footer-contacts__toggle--hidden');
 
-    if (footerContactsInfo) {
-      footerContactsInfo.classList.add('footer-contacts__info--closed');
-    }
-
-    if (footerNav && footerNavBtn) {
-      footerNavBtn.classList.remove('footer-nav__toggle--hidden');
-      footerNavBtn.addEventListener('click', function (evt) {
-        evt.preventDefault();
-
-        if (footerNavBtn.classList.contains('footer-nav__toggle--open')) {
-          onAccordionClose(footerNavBtn, 'footer-nav__toggle--open', footerNavLinks, 'footer-nav__links--closed');
-        } else {
-          onAccordionOpen(footerNavBtn, 'footer-nav__toggle--open', footerNavLinks, 'footer-nav__links--closed');
-        }
-      });
-    }
-
-    if (footerContactsInfo && footerContactsBtn) {
-      footerContactsBtn.classList.remove('footer-contacts__toggle--hidden');
-      footerContactsBtn.addEventListener('click', function (evt) {
-        evt.preventDefault();
-
-        if (footerContactsBtn.classList.contains('footer-contacts__toggle--open')) {
-          onAccordionClose(footerContactsBtn, 'footer-contacts__toggle--open', footerContactsInfo, 'footer-contacts__info--closed');
-        } else {
-          onAccordionOpen(footerContactsBtn, 'footer-contacts__toggle--open', footerContactsInfo, 'footer-contacts__info--closed');
-        }
-      });
-    }
-
-  };
-
-  setAccordionActive();
+    footerContactsBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      footerContactsBtn.classList.toggle('footer-contacts__toggle--open');
+      footerContactsInfo.classList.toggle('footer-contacts__info--closed');
+    });
+  }
 })();
 
 'use strict';
 
 (function () {
-  var cbForm = document.querySelector('form');
-  var cbPhone = cbForm.querySelector('#phone');
-  var cbName = cbForm.querySelector('#username');
   var MIN_NAME_LENGTH = 4;
   var MAX_NAME_LENGTH = 30;
   var cbPhoneMask = {
     mask: '+{7}(000)000-00-00'
   };
+
+  var cbForm = document.querySelector('form');
+  var cbPhone = cbForm.querySelector('#phone');
+  var cbName = cbForm.querySelector('#username');
 
   var onPhoneFocus = function (evt) {
     if (evt.target.value === '') {
@@ -140,7 +116,7 @@
     popup.classList.add('popup--hidden');
     page.classList.remove('page--lock');
     closeBtn.removeEventListener('click', onPopupClose);
-    document.removeEventListener('keydown', oneEscPress);
+    document.removeEventListener('keydown', onEscPress);
     popup.removeEventListener('click', onPopupClose);
     phoneField.removeEventListener('focus', window.form.onPhoneFocus);
     phoneField.removeEventListener('input', window.form.onPhoneInput);
@@ -149,7 +125,7 @@
 
   };
 
-  var oneEscPress = function (evt) {
+  var onEscPress = function (evt) {
     if (evt.key === EVT_KEY_ESCAPE) {
       onPopupClose();
     }
@@ -161,7 +137,7 @@
     }
   };
 
-  var onPopupOpen = function () {
+  var openPopup = function () {
     nameField.value = nameStored;
     phoneField.value = phoneStored;
     commentField.value = commentStored;
@@ -192,10 +168,10 @@
       popup.classList.remove('popup--hidden');
       page.classList.add('page--lock');
       closeBtn.addEventListener('click', onPopupClose);
-      document.addEventListener('keydown', oneEscPress);
+      document.addEventListener('keydown', onEscPress);
       popup.addEventListener('click', onOverlayClick);
       nameField.focus();
-      onPopupOpen();
+      openPopup();
       phoneField.addEventListener('focus', window.form.onPhoneFocus);
       phoneField.addEventListener('input', window.form.onPhoneInput);
       nameField.addEventListener('input', window.form.onNameInput);
