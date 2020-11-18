@@ -16,6 +16,7 @@
   color: $black;
 }
 
+// корректирует отображение состояния active в IE
 @mixin blank-pseudo {
   content: "  ";
   display: block;

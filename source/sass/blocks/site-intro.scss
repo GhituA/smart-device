@@ -136,6 +136,8 @@
   width: 705px;
   height: 515px;
 
+  object-fit: cover;
+
   @media (max-width: 1500px) {
     left: 55%;
     margin-left: 100px;
@@ -160,7 +162,7 @@
   }
 }
 
-.site-intro__button {
+.site-intro__container a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,18 +192,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    position: relative;
-    font-size: 0;
-    line-height: 0;
     margin-left: 0;
     width: 100%;
-
-    &::after {
-      content: "Бесплатная консультация";
-      font-size: 16px;
-      line-height: 19px;
-      letter-spacing: 0.05em;
-    }
   }
 
   &:hover,
@@ -217,6 +209,23 @@
     background-color: $blue-dark;
   }
 }
+
+.site-intro__button-text {
+  &--full {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--short {
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
+}
+
 
 .site-intro__scroll {
   position: absolute;

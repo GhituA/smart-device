@@ -26,11 +26,12 @@
 .footer-nav__bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-nav__bar h2 {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   padding: 0;
 
   font-size: 15px;
@@ -38,10 +39,6 @@
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-
-  @media (max-width: $desktop-width) {
-    margin-bottom: 24px;
-  }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 0;
