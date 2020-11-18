@@ -1,14 +1,15 @@
 'use strict';
 
 (function () {
-  var cbForm = document.querySelector('form');
-  var cbPhone = cbForm.querySelector('#phone');
-  var cbName = cbForm.querySelector('#username');
   var MIN_NAME_LENGTH = 4;
   var MAX_NAME_LENGTH = 30;
   var cbPhoneMask = {
     mask: '+{7}(000)000-00-00'
   };
+
+  var cbForm = document.querySelector('form');
+  var cbPhone = cbForm.querySelector('#phone');
+  var cbName = cbForm.querySelector('#username');
 
   var onPhoneFocus = function (evt) {
     if (evt.target.value === '') {
