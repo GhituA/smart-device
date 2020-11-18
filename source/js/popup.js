@@ -20,7 +20,7 @@
     popup.classList.add('popup--hidden');
     page.classList.remove('page--lock');
     closeBtn.removeEventListener('click', onPopupClose);
-    document.removeEventListener('keydown', oneEscPress);
+    document.removeEventListener('keydown', onEscPress);
     popup.removeEventListener('click', onPopupClose);
     phoneField.removeEventListener('focus', window.form.onPhoneFocus);
     phoneField.removeEventListener('input', window.form.onPhoneInput);
@@ -29,7 +29,7 @@
 
   };
 
-  var oneEscPress = function (evt) {
+  var onEscPress = function (evt) {
     if (evt.key === EVT_KEY_ESCAPE) {
       onPopupClose();
     }
@@ -41,7 +41,7 @@
     }
   };
 
-  var onPopupOpen = function () {
+  var openPopup = function () {
     nameField.value = nameStored;
     phoneField.value = phoneStored;
     commentField.value = commentStored;
@@ -72,10 +72,10 @@
       popup.classList.remove('popup--hidden');
       page.classList.add('page--lock');
       closeBtn.addEventListener('click', onPopupClose);
-      document.addEventListener('keydown', oneEscPress);
+      document.addEventListener('keydown', onEscPress);
       popup.addEventListener('click', onOverlayClick);
       nameField.focus();
-      onPopupOpen();
+      openPopup();
       phoneField.addEventListener('focus', window.form.onPhoneFocus);
       phoneField.addEventListener('input', window.form.onPhoneInput);
       nameField.addEventListener('input', window.form.onNameInput);
