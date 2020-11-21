@@ -21,3 +21,7 @@ img[data-object-fit="contain"] {
 img[data-object-fit="cover"] {
   object-fit: cover;
 }
+
+input, select, textarea {
+  border-radius: 0;
+}
