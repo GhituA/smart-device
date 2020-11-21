@@ -78,7 +78,6 @@
 
   &:hover {
     background-color: $blue;
-    cursor: pointer;
     border: 1px solid $blue;
     border-left: 3px solid $blue;
   }
@@ -148,15 +147,31 @@
   }
 }
 
+.features__item--stopwatch h3 {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.features__item--hired h3 {
+  @media (max-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
 .features__item--detective h3 {
   @media (max-width: $desktop-width) {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 18px;
   }
 }
 
 .features__item--tag h3 {
   @media (max-width: $tablet-width) {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
   }
 }
 
@@ -166,7 +181,7 @@
 
   font-family: $ptmono;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 21px;
   color: $grey;
 
   @media (max-width: $desktop-width) {
