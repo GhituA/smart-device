@@ -42,7 +42,7 @@
     min-height: 695px;
 
     background-image: url("../img/hero-mobile@1x.png");
-    background-position-y: 34px;
+    background-position-y: 50px;
     background-size: 768px auto;
 
 
@@ -55,6 +55,12 @@
 .site-intro__container {
   position: relative;
   z-index: 4;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .site-intro h1 {
@@ -123,6 +129,10 @@
 
     @media (max-width: $desktop-width) {
       width: 33px;
+    }
+
+    @media (max-width: $tablet-width) {
+      left: 3px;
     }
   }
 }
@@ -193,7 +203,7 @@
 
   @media (max-width: $tablet-width) {
     margin-left: 0;
-    width: 100%;
+    width: 290px;
   }
 
   &:hover,
