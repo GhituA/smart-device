@@ -21,7 +21,7 @@
 }
 
 .socials__logo {
-  margin-bottom: 53px;
+  margin-bottom: 46px;
 
   @media (max-width: $desktop-width) {
     margin-bottom: 0;
@@ -37,6 +37,8 @@
   display: flex;
   flex-wrap: wrap;
 
+  max-width: 210px;
+
   @media (max-width: $desktop-width) {
     width: 115px;
   }
@@ -44,9 +46,12 @@
 
 .socials__links li {
   margin-right: 15px;
+  margin-bottom: 5px;
 
-  &:nth-child(3n) {
-    margin-right: 0;
+  @media (max-width: $desktop-width) {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 
