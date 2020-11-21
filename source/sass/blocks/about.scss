@@ -161,6 +161,12 @@
   &:focus {
     color: $white;
     background-color: $blue;
+
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid $blue-dark;
   }
 
   &:active {
