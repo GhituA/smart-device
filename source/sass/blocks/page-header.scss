@@ -1,10 +1,9 @@
 .page-header {
-  position: relative;
+  position: absolute;
   z-index: 5;
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: -118px;
   padding: 33px calc(50% - 705px);
   width: 100%;
 
