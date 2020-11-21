@@ -48,18 +48,21 @@
   right: 15px;
 
   padding: 2px;
-  width: 22px;
-  height: 22px;
 
   color: $white;
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  transition: 0.2s;
 
   &:focus,
   &:hover {
     color: $blue-dark;
     outline: 0;
+  }
+
+  &:focus {
+    outline: 1px solid $white;
   }
 
   &:active {
@@ -211,6 +214,16 @@
   font-family: $ptmono;
 }
 
+.popup__field--personal input {
+  left: 8px;
+  top: 18px;
+}
+
+.popup__field--personal input:hover,
+.popup__field--personal input + label:hover {
+  cursor: pointer;
+}
+
 .popup__field--personal input + label::before {
   content: "";
   position: absolute;
@@ -236,6 +249,8 @@
   background-size: contain;
 }
 
-.popup__field--personal input:focus + label::before {
-  background-color: $blue-50;
+.popup__field--personal input:focus + label::before,
+.popup__field--personal input:hover + label::before {
+  transform: scale(1.2);
+  border: 1px solid $blue-dark;
 }
