@@ -41,6 +41,7 @@
   @media (max-width: $desktop-width) {
     width: 100%;
   }
+
   @media (max-width: $tablet-width) {
     max-width: 350px;
   }
@@ -254,7 +255,6 @@
 .callback__field--personal input:hover,
 .callback__field--personal input + label:hover {
   cursor: pointer;
-
 }
 
 .callback__field--personal input + label::before {
