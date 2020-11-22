@@ -27,6 +27,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
+
+  @media (max-width: $tablet-width) {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 }
 
 .footer-nav__bar h2 {
@@ -46,10 +52,12 @@
 }
 
 .footer-nav__toggle {
-  position: relative;
   display: none;
+}
 
+.footer-nav__bar--js .footer-nav__toggle {
   @media (max-width: $tablet-width) {
+    position: relative;
     display: block;
 
     width: 16px;
@@ -57,11 +65,7 @@
 
     border: 0;
     background-color: transparent;
-    cursor: pointer;
-
-    &--hidden {
-      display: none;
-    }
+    transition: 0.2s;
 
     &:focus {
       outline: 1px solid $blue;
@@ -94,12 +98,11 @@
   }
 }
 
-.footer-nav__toggle--open {
+.footer-nav--open .footer-nav__toggle {
   &::after {
     display: none;
   }
 }
-
 
 .footer-nav__links {
   @include list-reset;
@@ -114,11 +117,14 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-top: 28px;
+    display: none;
+  }
+}
 
-    &--closed {
-      display: none;
-    }
+.footer-nav--open .footer-nav__links {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    margin-top: 28px;
   }
 }
 

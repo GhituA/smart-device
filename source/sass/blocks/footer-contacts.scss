@@ -21,6 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
+
+  @media (max-width: $tablet-width) {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 }
 
 .footer-contacts__bar h2 {
@@ -40,10 +46,13 @@
 }
 
 .footer-contacts__toggle {
-  position: relative;
   display: none;
+}
 
+
+.footer-contacts__bar--js .footer-contacts__toggle {
   @media (max-width: $tablet-width) {
+    position: relative;
     display: block;
 
     width: 16px;
@@ -51,11 +60,7 @@
 
     border: 0;
     background-color: transparent;
-    cursor: pointer;
-
-    &--hidden {
-      display: none;
-    }
+    transition: 0.2s;
 
     &:focus {
       outline: 1px solid $blue;
@@ -88,7 +93,7 @@
   }
 }
 
-.footer-contacts__toggle--open {
+.footer-contacts--open .footer-contacts__toggle {
   &::after {
     display: none;
   }
@@ -99,12 +104,15 @@
   flex-direction: column;
 
   @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer-contacts--open .footer-contacts__info {
+  @media (max-width: $tablet-width) {
+    display: flex;
     padding-right: 5px;
     margin-top: 33px;
-
-    &--closed {
-      display: none;
-    }
   }
 }
 
