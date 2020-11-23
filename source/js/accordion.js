@@ -35,7 +35,6 @@
 
   if (footerContactsBar && footerContactsInfo) {
     footerContactsBar.classList.add('footer-contacts__bar--js');
-    footerContacts.classList.remove('footer-contacts--open');
 
     footerContactsBar.addEventListener('click', function () {
       onContactsClick();
