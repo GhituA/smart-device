@@ -36,6 +36,7 @@
     phoneField.removeEventListener('input', window.form.onPhoneInput);
     nameField.removeEventListener('input', window.form.onNameInput);
     popupForm.removeEventListener('submit', onFormSubmit);
+    popupForm.reset();
   };
 
   var onEscPress = function (evt) {
@@ -86,7 +87,8 @@
       nameField.focus();
       openPopup();
       phoneField.addEventListener('focus', window.form.onPhoneFocus);
-      phoneField.addEventListener('input', window.form.onPhoneInput);
+      phoneField.addEventListener('keydown', window.form.onPhoneInput);
+      phoneField.addEventListener('keyup', window.form.onPhoneValidityCheck);
       nameField.addEventListener('input', window.form.onNameInput);
       popupForm.addEventListener('submit', onFormSubmit);
     });
