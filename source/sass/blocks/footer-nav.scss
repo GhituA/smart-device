@@ -17,7 +17,7 @@
     width: 100%;
     margin-top: 0;
     margin-left: 0;
-    padding: 28px 4.6%;
+    padding: 0;
 
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
@@ -30,6 +30,7 @@
   pointer-events: none;
 
   @media (max-width: $tablet-width) {
+    padding: 28px 4.6%;
     pointer-events: auto;
     cursor: pointer;
   }
@@ -118,13 +119,13 @@
 
   @media (max-width: $tablet-width) {
     display: none;
+    padding: 0 4.6% 28px;
   }
 }
 
 .footer-nav--open .footer-nav__links {
   @media (max-width: $tablet-width) {
     display: flex;
-    margin-top: 28px;
   }
 }
 

@@ -11,7 +11,6 @@
     width: 100%;
     margin-top: 0;
     margin-right: 0;
-    padding: 28px 4.6%;
 
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
@@ -24,6 +23,7 @@
   pointer-events: none;
 
   @media (max-width: $tablet-width) {
+    padding: 28px 4.6%;
     pointer-events: auto;
     cursor: pointer;
   }
@@ -111,8 +111,9 @@
 .footer-contacts--open .footer-contacts__info {
   @media (max-width: $tablet-width) {
     display: flex;
-    padding-right: 5px;
-    margin-top: 33px;
+    padding-left: 4.6%;
+    padding-right: 6%;
+    padding-bottom: 28px;
   }
 }
 
