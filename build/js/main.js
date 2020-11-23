@@ -70,14 +70,23 @@
 
   var onPhoneInput = function (evt) {
     var newMask = new window.IMask(evt.target, cbPhoneMask);
-
-    if (evt.target.validity.patternMismatch) {
-      evt.target.setCustomValidity(phoneErrorMessage);
-    } else {
-      evt.target.setCustomValidity('');
-    }
     return newMask;
   };
+
+  var onPhoneValidityCheck = function (evt) {
+    if (evt.target.validity.valueMissing) {
+      evt.target.setCustomValidity(requiredMessage);
+      return false;
+    }
+    else if (evt.target.validity.patternMismatch) {
+      evt.target.setCustomValidity(phoneErrorMessage);
+      return false;
+    }
+    else {
+      evt.target.setCustomValidity('');
+      return true;
+    }
+  }
 
   var onNameInput = function (evt) {
     var valueLength = evt.target.value.length;
@@ -94,7 +103,8 @@
 
   if (cbForm) {
     cbPhone.addEventListener('focus', onPhoneFocus);
-    cbPhone.addEventListener('input', onPhoneInput);
+    cbPhone.addEventListener('keydown', onPhoneInput);
+    cbPhone.addEventListener('keyup', onPhoneValidityCheck);
     cbName.addEventListener('input', onNameInput);
   }
 
@@ -102,7 +112,8 @@
     cbPhoneMask: cbPhoneMask,
     onPhoneFocus: onPhoneFocus,
     onPhoneInput: onPhoneInput,
-    onNameInput: onNameInput
+    onNameInput: onNameInput,
+    onPhoneValidityCheck: onPhoneValidityCheck
   };
 
 })();
@@ -145,6 +156,7 @@
     phoneField.removeEventListener('input', window.form.onPhoneInput);
     nameField.removeEventListener('input', window.form.onNameInput);
     popupForm.removeEventListener('submit', onFormSubmit);
+    popupForm.reset();
   };
 
   var onEscPress = function (evt) {
@@ -195,7 +207,8 @@
       nameField.focus();
       openPopup();
       phoneField.addEventListener('focus', window.form.onPhoneFocus);
-      phoneField.addEventListener('input', window.form.onPhoneInput);
+      phoneField.addEventListener('keydown', window.form.onPhoneInput);
+      phoneField.addEventListener('keyup', window.form.onPhoneValidityCheck);
       nameField.addEventListener('input', window.form.onNameInput);
       popupForm.addEventListener('submit', onFormSubmit);
     });

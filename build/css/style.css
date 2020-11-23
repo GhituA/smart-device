@@ -2201,15 +2201,20 @@ input[type="checkbox"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0; }
   .popup__field input::-webkit-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field input::-moz-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field input:-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field input::-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field input::placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field input:hover {
     outline: 1px solid rgba(255, 255, 255, 0.5); }
   .popup__field input:focus {
@@ -2227,15 +2232,20 @@ input[type="checkbox"].visually-hidden {
   border: 0;
   resize: none; }
   .popup__field--text textarea::-webkit-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field--text textarea::-moz-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field--text textarea:-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field--text textarea::-ms-input-placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field--text textarea::placeholder {
-    color: #ffffff; }
+    color: #ffffff;
+    opacity: 1; }
   .popup__field--text textarea:hover {
     outline: 1px solid rgba(255, 255, 255, 0.5); }
   .popup__field--text textarea:focus {
