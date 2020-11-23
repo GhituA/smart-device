@@ -1815,9 +1815,7 @@ input[type="checkbox"].visually-hidden {
               flex-direction: column; } }
   @media (max-width: 767px) {
     .footer-nav__links {
-      display: none;
-      -webkit-transition: 0.2s;
-      transition: 0.2s; } }
+      display: none; } }
 
 @media (max-width: 767px) {
   .footer-nav--open .footer-nav__links {

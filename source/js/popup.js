@@ -11,10 +11,20 @@
   var phoneField = popup.querySelector('#popup-phone');
   var commentField = popup.querySelector('#popup-comment');
 
-  var isStorageSupport = true;
+  var storageSupport = true;
   var nameStored = '';
   var phoneStored = '';
   var commentStored = '';
+
+  if (popup) {
+    try {
+      nameStored = localStorage.getItem('name');
+      phoneStored = localStorage.getItem('phone');
+      commentStored = localStorage.getItem('comment');
+    } catch (err) {
+      storageSupport = false;
+    }
+  }
 
   var onPopupClose = function () {
     popup.classList.add('popup--hidden');
@@ -26,7 +36,6 @@
     phoneField.removeEventListener('input', window.form.onPhoneInput);
     nameField.removeEventListener('input', window.form.onNameInput);
     popupForm.removeEventListener('submit', onFormSubmit);
-
   };
 
   var onEscPress = function (evt) {
@@ -42,28 +51,28 @@
   };
 
   var openPopup = function () {
-    nameField.value = nameStored;
-    phoneField.value = phoneStored;
-    commentField.value = commentStored;
+    if (storageSupport) {
+      if (nameStored) {
+        nameField.value = nameStored;
+      }
+
+      if (phoneStored) {
+        phoneField.value = phoneStored;
+      }
+
+      if (commentStored) {
+        commentField.value = commentStored;
+      }
+    }
   };
 
   var onFormSubmit = function () {
-    if (isStorageSupport) {
+    if (storageSupport) {
       localStorage.setItem('name', nameField.value);
       localStorage.setItem('phone', phoneField.value);
       localStorage.setItem('comment', commentField.value);
     }
   };
-
-  if (popup) {
-    try {
-      nameStored = localStorage.getItem('name');
-      phoneStored = localStorage.getItem('phone');
-      commentStored = localStorage.getItem('comment');
-    } catch (err) {
-      isStorageSupport = false;
-    }
-  }
 
   if (navCbBtn) {
     navCbBtn.addEventListener('click', function (evt) {
